@@ -1,0 +1,3 @@
+bleak==0.22.2
+dbus-fast==2.24.0
+evdev==1.7.1
