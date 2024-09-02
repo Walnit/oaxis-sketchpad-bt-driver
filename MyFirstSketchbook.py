@@ -84,12 +84,12 @@ class Sketchbook:
                 if strArr[1] == 'ff' and strArr[2] == 'ff':
                     if self.callback_on_tablet_delete is not None: self.callback_on_tablet_delete()
                 elif strArr[1] == 'ff' and strArr[2] == 'dd':
+                    self.pen_button_pressed = True
                     if self.callback_on_pen_upper_button_pressed is not None: 
-                        self.pen_button_pressed = True
                         self.callback_on_pen_upper_button_pressed()
                 elif strArr[1] == 'ff' and strArr[2] == 'ee':
+                    self.pen_button_pressed = True
                     if self.callback_on_pen_lower_button_pressed is not None: 
-                        self.pen_button_pressed = True
                         self.callback_on_pen_lower_button_pressed()
                 pass
             case '02':
