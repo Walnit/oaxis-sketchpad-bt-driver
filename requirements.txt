@@ -1,3 +1,6 @@
 bleak==0.22.2
-dbus-fast==2.24.0
-evdev==1.7.1
+
+dbus-fast==2.24.0; sys_platform == 'linux'
+evdev==1.7.1; sys_platform == 'linux'
+
+mouse==0.7.1; sys_platform == 'win32'

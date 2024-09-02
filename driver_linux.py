@@ -14,15 +14,15 @@ if len(sys.argv) != 2:
     sys.exit()
 
 TABLET_SIZE = (10751, 17380)
-TABLE_ACTUAL_SIZE = (135, 220)
+TABLET_ACTUAL_SIZE = (135, 220)
 TABLET_MAX_PRESSURE = 41850
 
 capabilities = {    
 	ecodes.EV_KEY: [ecodes.BTN_TOOL_PEN, ecodes.BTN_TOUCH, ecodes.BTN_TOOL_RUBBER, ecodes.BTN_RIGHT],
 	ecodes.EV_ABS: [
 		(ecodes.ABS_PRESSURE, AbsInfo(value=0, min=0, max=TABLET_MAX_PRESSURE, fuzz=0, flat=0, resolution=0)),
-		(ecodes.ABS_Y, AbsInfo(value=0, min=0, max=TABLET_SIZE[0], fuzz=0, flat=0, resolution=int(TABLET_SIZE[0]/TABLE_ACTUAL_SIZE[0]))),
-		(ecodes.ABS_X, AbsInfo(value=0, min=0, max=TABLET_SIZE[1], fuzz=0, flat=0, resolution=int(TABLET_SIZE[1]/TABLE_ACTUAL_SIZE[1]))),
+		(ecodes.ABS_Y, AbsInfo(value=0, min=0, max=TABLET_SIZE[0], fuzz=0, flat=0, resolution=int(TABLET_SIZE[0]/TABLET_ACTUAL_SIZE[0]))),
+		(ecodes.ABS_X, AbsInfo(value=0, min=0, max=TABLET_SIZE[1], fuzz=0, flat=0, resolution=int(TABLET_SIZE[1]/TABLET_ACTUAL_SIZE[1]))),
 	]
 }
 
